@@ -6,7 +6,15 @@
 #include <string>
 
 int main(){
+    int a = 37;
+    int* ptr;
+    ptr = &a;
 
+    std::cout << " The content of a is " << a << std::endl;
+    std::cout << " The pointer is pointing to address " << ptr << std::endl;
+    std::cout << " The address of a is " << &a << std::endl;
+    std::cout << " Where pointer is pointing, we have " << *ptr << std::endl;
+    std::cout << " The address of pointer is " << &ptr << std::endl;
     std::cout << std::endl << std::endl;
     return (0);
 }
