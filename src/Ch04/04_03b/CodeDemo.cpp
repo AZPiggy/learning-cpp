@@ -16,13 +16,15 @@ int main(){
         ptr = next(ptr,1);
     }
     std::cout << std::endl << std::endl;
-    
+
     // When you are sure that the loop body is safe:
     int i = 0;
     do{
         std::cout << numbers[i] << " ";
         i++;
     } while (i < numbers.size());
+
+    // Body will execute exactly once before evaluating the while condition.
     
     std::cout << std::endl << std::endl;
     return (0);
