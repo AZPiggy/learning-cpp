@@ -7,6 +7,7 @@
 #include <fstream>
 
 int main(){
+    // Very similar to cin operation
     std::ifstream inFile;
     std::string str;
     int number;
@@ -16,11 +17,17 @@ int main(){
     if (inFile.fail())
         std::cout << std::endl << "File not found!" << std::endl;
     else{
-        while (!inFile.eof()){
+        while (!inFile.eof()){ // Will iterate as long as the end of the file is not reached.
+            getline(inFile, str); // in string header file; get one line of text
+            std::cout << str << ", ";
             getline(inFile, str);
-            std::cout << str << std::endl;
+            number = stoi(str); // convert string to integer, in string header
+            std::cout << number << ", ";
+            getline(inFile, str);
+            letter = str[0];
+            std::cout << letter << std::endl;
         }
-        inFile.close();
+        inFile.close(); // Must close it
     }
     
     std::cout << std::endl << std::endl;

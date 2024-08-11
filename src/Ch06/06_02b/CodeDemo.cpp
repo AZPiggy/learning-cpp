@@ -10,10 +10,11 @@ int main(){
     std::ofstream outFile;
     float a = 4.333f, b = 5.302f;
 
-    outFile.open("calculations.txt");
+    outFile.open("calculations.txt"); // open a new file
     if (outFile.fail())
         std::cout << std::endl << "Couldn't open the file!" << std::endl;
     else{
+        // Similar syntax to cout
         outFile << "a = " << a << std::endl;
         outFile << "b = " << b << std::endl;
         outFile << "a + b = " << a + b << std::endl;
